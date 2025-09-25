@@ -1,0 +1,36 @@
+# defaults/main.yml
+# Oracle Cloud Infrastructure Identifiers (OCIDs)
+# Replace the placeholder values with actual OCIDs in your environment
+
+# Tenancy OCID
+tenancy_ocid: "ocid1.tenancy.oc1..exampleuniqueID"
+
+# Compartment OCID
+compartment_ocid: "ocid1.compartment.oc1..exampleuniqueID"
+
+# User OCID
+user_ocid: "ocid1.user.oc1..exampleuniqueID"
+
+# Fingerprint for the API key
+api_fingerprint: "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx"
+
+# Region (e.g., uk-london-1, us-ashburn-1)
+region: "your-region"
+
+# OCID for the Virtual Cloud Network (VCN)
+vcn_ocid: "ocid1.vcn.oc1..exampleuniqueID"
+
+# OCID for the Subnet
+subnet_ocid: "ocid1.subnet.oc1..exampleuniqueID"
+
+# OCID for the Image (e.g., Oracle Linux)
+image_ocid: "ocid1.image.oc1..exampleuniqueID"
+
+# OCID for the Shape (e.g., VM.Standard.E4.Flex)
+shape_ocid: "ocid1.shape.oc1..exampleuniqueID"
+
+# OCID for the SSH key (if stored in OCI)
+ssh_key_ocid: "ocid1.key.oc1..exampleuniqueID"
+
+# OCID for the Block Volume (optional)
+block_volume_ocid: "ocid1.volume.oc1..exampleuniqueID"
