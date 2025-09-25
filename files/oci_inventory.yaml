@@ -1,0 +1,7 @@
+plugin: oci
+config_file: ~/.oci/config
+profile: DEFAULT
+regions:
+  - uk-london-1
+compartment_id: ocid1.compartment.oc1..example
+key_by: id
