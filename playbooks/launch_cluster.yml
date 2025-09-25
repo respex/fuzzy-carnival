@@ -1,0 +1,10 @@
+# launch_cluster.yml
+
+- name: Launch OCI Cluster with Instance Pool
+  hosts: localhost
+  gather_facts: no
+  roles:
+    - role: oci-instance-pool-role
+      vars:
+        instance_count: 5  # Change this to scale up/down
+        oci_api_token: "{{ lookup('env', 'OCI_API_TOKEN') }}"

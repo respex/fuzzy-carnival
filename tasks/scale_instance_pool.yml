@@ -1,0 +1,10 @@
+- name: Scale instance pool via cluster network
+  uri:
+    url: "https://iaas.oci.oraclecloud.com/20160918/clusterNetworks/{{ cluster_network_ocid }}/actions/scale"
+    method: POST
+    headers:
+      Authorization: "Bearer {{ oci_api_token }}"
+      Content-Type: "application/json"
+    body_format: json
+    body:
+      size: "{{ instance_count }}"

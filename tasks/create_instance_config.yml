@@ -1,0 +1,15 @@
+- name: Create instance configuration
+  uri:
+    url: "https://iaas.oci.oraclecloud.com/20160918/instanceConfigurations"
+    method: POST
+    headers:
+      Authorization: "Bearer {{ oci_api_token }}"
+      Content-Type: "application/json"
+    body: "{{ lookup('template', 'instance_config.json.j2') }}"
+    body_format: json
+    return_content: yes
+  register: instance_config_response
+
+- name: Set instance config OCID
+  set_fact:
+    instance_config_ocid: "{{ instance_config_response.json.id }}"

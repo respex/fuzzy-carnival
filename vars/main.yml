@@ -1,0 +1,4 @@
+instance_config_name: "my-instance-config"
+instance_pool_name: "my-instance-pool"
+cluster_network_name: "my-cluster-network"
+availability_domain: "Uocm:UK-LONDON-1-AD-1"

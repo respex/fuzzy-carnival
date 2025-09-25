@@ -1,0 +1,19 @@
+- name: Create cluster network
+  uri:
+    url: "https://iaas.oci.oraclecloud.com/20160918/clusterNetworks"
+    method: POST
+    headers:
+      Authorization: "Bearer {{ oci_api_token }}"
+      Content-Type: "application/json"
+    body_format: json
+    body:
+      compartmentId: "{{ compartment_ocid }}"
+      displayName: "{{ cluster_network_name }}"
+      instancePool:
+        instanceConfigurationId: "{{ instance_config_ocid }}"
+        size: "{{ instance_count }}"
+  register: cluster_network_response
+
+- name: Set cluster network OCID
+  set_fact:
+    cluster_network_ocid: "{{ cluster_network_response.json.id }}"
