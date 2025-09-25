@@ -1,0 +1,14 @@
+{
+  "compartmentId": "{{ compartment_ocid }}",
+  "displayName": "{{ instance_config_name }}",
+  "instanceDetails": {
+    "instanceType": "compute",
+    "shape": "{{ shape }}",
+    "launchDetails": {
+      "availabilityDomain": "{{ availability_domain }}",
+      "compartmentId": "{{ compartment_ocid }}",
+      "imageId": "{{ image_ocid }}",
+      "subnetId": "{{ subnet_ocid }}"
+    }
+  }
+}
